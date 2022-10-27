@@ -1,0 +1,36 @@
+.modal{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    .modal__video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .modal__content{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        img{
+            height: 80%;
+            z-index: 3;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .modal{
+        .modal__content{
+            img{
+                height: 40%;
+            }
+        }
+    }
+}

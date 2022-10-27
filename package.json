@@ -1,0 +1,16 @@
+{
+  "name": "leandro-soldaduras",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-scss": "sass --watch src/scss/style.scss:css/main.css"
+    
+  },
+  "author": "emanuel palacio",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
