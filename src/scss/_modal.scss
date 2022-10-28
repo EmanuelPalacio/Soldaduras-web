@@ -3,6 +3,7 @@
     width: 100vw;
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: all 1s linear;
 
     .modal__video{
         position: absolute;
@@ -13,6 +14,7 @@
     .modal__content{
         position: absolute;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -23,6 +25,9 @@
             z-index: 3;
         }
     }
+}
+.modal--active{
+    clip-path: polygon(0 0, 0% 0, 0% 0%, 0% 0%);
 }
 
 @media (max-width: 600px) {
