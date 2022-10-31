@@ -1,15 +1,19 @@
+@import url('http://fonts.cdnfonts.com/css/geomanist');
+@import url('http://fonts.cdnfonts.com/css/basillion');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
+    font-family: 'Geomanist', sans-serif;
 }
 //colors
-$primary: white;
-$secondary: black;
+$primary: #333333;
+$secondary: #ffffff;
 $third: blue;
-$colorFontTittle: black;
-$colorFontText: white;
+$colorFontPrimary: #333333;
+$colorFontSecondary: white;
 //fonts size
 $fontSizeTittle: 2rem;
 $fontSizeSubTittle: 1.5rem;

@@ -1,14 +1,19 @@
+@import url("http://fonts.cdnfonts.com/css/geomanist");
+@import url("http://fonts.cdnfonts.com/css/basillion");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
+  font-family: "Geomanist", sans-serif;
 }
 
 .modal {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   transition: all 1s linear;
 }
@@ -35,6 +40,7 @@
 
 .modal--active {
   clip-path: polygon(0 0, 0% 0, 0% 0%, 0% 0%);
+  visibility: hidden;
 }
 
 @media (max-width: 600px) {
@@ -57,6 +63,65 @@
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   box-shadow: inset;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 100px 1fr 100px;
+  background: radial-gradient(circle, #111010, #363636, #605f60, #8c8c8c, #bcbcbc, #bcbcbc, #bcbcbc, #bcbcbc, #8c8c8c, #605f60, #363636, #111010);
+  overflow: hidden;
+}
+
+.overflow {
+  overflow: visible;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+header ul {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
+  gap: 8%;
+}
+header ul li a img {
+  height: 100px;
+}
+header ul li a {
+  font-family: "Basillion", sans-serif;
+  color: #333333;
+}
+
+main .galery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-rows: 350px;
+  margin: 3vh 3vw;
+}
+main .galery .galery__containerImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  main .galery {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
