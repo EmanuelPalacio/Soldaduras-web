@@ -3,7 +3,7 @@ import { getStorage, ref, getDownloadURL, listAll } from 'https://www.gstatic.co
 const storage = getStorage()
 const galery = document.querySelector('.galery');
 
-listAll(ref(storage, 'galery'))
+listAll(ref(storage))
     .then((res) => {
         res.items.forEach((e)=> {
             const pathReference = ref(storage, `${e._location.path_}`);

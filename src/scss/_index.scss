@@ -121,10 +121,18 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     main{
         .galery{
             margin:0;   
+        }
+        .contact{
+            .contact__form {
+                .contact__input {
+                    width: 100%;
+
+                }
+            }
         }
     }
 }
