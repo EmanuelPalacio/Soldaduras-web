@@ -1,6 +1,7 @@
 body {
     display: grid;
     min-height: 100vh;
+    max-width: 100vw;
     grid-template-rows: 100px 1fr 100px;
     background: black;
     overflow: hidden;
@@ -86,7 +87,7 @@ main{
             gap: 15px;
 
             z-index: 2;
-            .contact__input {
+            .contact__input, .contact__textarea {
                 border: none;
                 outline: none;
                 width: 550px;
@@ -96,6 +97,15 @@ main{
                 background-color: rgba($secondary, 0.1);
                 font-size: $fontSizeSubTittle;
                 color: $secondary;
+            }
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button { 
+                appearance: none;
+                margin: 0; 
+            }
+            .contact__textarea{
+                height: 200px;
+                resize: none;
             }
         }
     }
@@ -117,11 +127,16 @@ footer {
         }
     }
     span {
+        text-align: center;
         margin:10px 0 ;
     }
 }
 
 @media (max-width: 600px) {
+    header ul{
+        margin: 0 15px;
+        gap: 5%;
+    }
     main{
         .galery{
             margin:0;   
