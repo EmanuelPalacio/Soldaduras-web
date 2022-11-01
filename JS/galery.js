@@ -1,9 +1,22 @@
+import { getStorage, ref, getDownloadURL, listAll } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js';
+
+const storage = getStorage()
 const galery = document.querySelector('.galery');
 
-const galeryContent = document.createElement('div');
-galeryContent.className = 'galery__containerImg'
-galeryContent.innerHTML =
+listAll(ref(storage, 'galery'))
+    .then((res) => {
+        res.items.forEach((e)=> {
+            const pathReference = ref(storage, `${e._location.path_}`);
+            getDownloadURL(pathReference)
+                .then((token) => {
+                    const galeryContent = document.createElement('div');
+                    galeryContent.className = 'galery__containerImg'
+                    galeryContent.innerHTML =
                         `
-                                <img src="https://images.unsplash.com/photo-1531053326607-9d349096d887?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                                <img src=${token} alt="">
                         `;
-galery.append(galeryContent);
+                        galery.append(galeryContent);
+        })
+    })
+});
+

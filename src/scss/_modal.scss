@@ -5,7 +5,7 @@
     height: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     transition: all 1s linear;
-    
+    z-index: 99;
 
     .modal__video{
         position: absolute;

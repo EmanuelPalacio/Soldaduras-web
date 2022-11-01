@@ -7,6 +7,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Geomanist", sans-serif;
+  color: #333333;
 }
 
 .modal {
@@ -16,6 +17,7 @@
   height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   transition: all 1s linear;
+  z-index: 99;
 }
 .modal .modal__video {
   position: absolute;
@@ -69,7 +71,7 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-rows: 100px 1fr 100px;
-  background: radial-gradient(circle, #111010, #363636, #605f60, #8c8c8c, #bcbcbc, #bcbcbc, #bcbcbc, #bcbcbc, #8c8c8c, #605f60, #363636, #111010);
+  background: black;
   overflow: hidden;
 }
 
@@ -106,16 +108,81 @@ main .galery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-auto-rows: 350px;
-  margin: 3vh 3vw;
+  margin-top: 2vh;
 }
 main .galery .galery__containerImg img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+main .contact {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .contact::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+main .contact h2 {
+  margin-bottom: 10vh;
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: "Basillion", sans-serif;
+  z-index: 5;
+}
+main .contact .contact__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+main .contact .contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 2;
+}
+main .contact .contact__form .contact__input {
+  border: none;
+  outline: none;
+  width: 550px;
+  height: 60px;
+  padding: 0 50px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.5rem;
+  color: #ffffff;
+}
 
 footer {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer ul {
+  display: inherit;
+  flex-direction: row;
+  gap: 50px;
+}
+footer ul li a i {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer ul li a i:hover {
+  color: #ffffff;
+}
+footer span {
+  margin: 10px 0;
 }
 
 @media (max-width: 500px) {

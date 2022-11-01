@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/c986322d71.js" crossorigin="anonymous"></script>
+    <script type="module" src="./JS/firebase.js" defer></script>
     <script src="./JS/index.js" defer></script>
-    <script src="./JS/galery.js" defer></script>
+    <script type="module" src="./JS/galery.js" defer></script>
     <title>Leandro Soldaduras</title>
 </head>
 <body>
@@ -21,31 +23,35 @@
     </section>
     <header>
         <ul>
-            <li><a href="#">GALERIA</a></li>
+            <li><a href="#galery">GALERIA</a></li>
             <li><a href="#">
                 <img src="./img/logo/Leandro-soldaduras-Black.svg" alt="logo leandro soldaduras">
             </a></li>
-            <li><a href="#">CONTACTO</a></li>
+            <li><a href="#CONTACTAME">CONTACTO</a></li>
         </ul>
     </header>
     <main>
         <section class="galery">
         </section>
-        <section>
-            <form action="">
-                <input type="text" name="name" >
-                <input type="text" name="surname" >
-                <input type="email" name="email" >
-                <input type="text" name="email" >
+        <section id="CONTACTAME" class="contact">
+            <h2>CONTACTAME!</h2>
+            <video class="contact__video" autoplay loop muted>
+                <source src="./img/Welding - 75269.mp4" type="video/mp4">
+            </video>
+            <form action="" class="contact__form">
+                <input type="text" name="name" id="name" class="contact__input" placeholder="Nombre">
+                <input type="text" name="surname" id="surname" class="contact__input" placeholder="Apellido">
+                <input type="email" name="email" id="email" class="contact__input" placeholder="Email">
+                <input type="text" name="email" id="text" class="contact__input" placeholder="Escribe aqui tu consulta...">
             </form>
         </section>
     </main>
     <footer>
         <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-whatsapp fa-3x"></i></a></i></li>
         </ul>
+        <span><i class="fa-solid fa-copyright"></i>Todos los derechos reservados Leandro Julian Dines</span>
     </footer>
 </body>
 </html>
