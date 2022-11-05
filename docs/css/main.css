@@ -1,5 +1,5 @@
-@import url("http://fonts.cdnfonts.com/css/geomanist");
-@import url("http://fonts.cdnfonts.com/css/basillion");
+@import url("https://fonts.cdnfonts.com/css/geomanist");
+@import url("https://fonts.cdnfonts.com/css/basillion");
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +17,7 @@
   visibility: visible;
   width: 100vw;
   height: 100vh;
+  background-color: #333333;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   transition: all 1s linear;
   z-index: 99;
@@ -212,6 +213,49 @@ footer span {
   }
   main .contact .contact__form .contact__input {
     width: 100%;
+  }
+}
+.error404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error404 .error404__message {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 10vh;
+  font-size: 3rem;
+  z-index: 3;
+}
+.error404 .error404__message h2, .error404 .error404__message p, .error404 .error404__message button a {
+  color: #ffffff;
+}
+.error404 img {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .error404 .error404__message {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 750px) {
+  .error404 {
+    text-align: center;
+  }
+  .error404 .error404__message {
+    width: 80%;
+  }
+  .error404 img {
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
   }
 }
 

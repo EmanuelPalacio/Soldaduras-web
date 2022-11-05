@@ -1,0 +1,44 @@
+.error404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .error404__message{
+        display: inherit;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        gap: 10vh;
+        font-size: 3rem;
+        z-index: 3;
+        h2, p, button a{
+            color: $secondary;
+        }
+    }
+    img{
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+}
+@media (max-width:1200px) {
+    .error404{
+        .error404__message{
+            font-size: 2rem;
+        }
+    }
+}
+@media (max-width:750px) {
+    .error404{
+        text-align: center;
+        .error404__message{
+            width: 80%;
+        }
+        img{
+            position: absolute;
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+}

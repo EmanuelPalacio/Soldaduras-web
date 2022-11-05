@@ -5,6 +5,7 @@
     visibility: visible;
     width: 100vw;
     height: 100vh;
+    background-color: $primary;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     transition: all 1s linear;
     z-index: 99;
