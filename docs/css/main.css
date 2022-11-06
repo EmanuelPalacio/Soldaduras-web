@@ -78,7 +78,7 @@ body {
   display: grid;
   min-height: 100vh;
   max-width: 100vw;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 100px 1fr 200px;
   background: black;
   overflow: hidden;
 }
