@@ -2,6 +2,7 @@ const btnModal = document.querySelector('#btnModal');
 const btn = document.querySelector('#btnSubmit');
 const form = document.querySelector('#form');
 
+
 btnModal.addEventListener('click', () => {
     const modal = document.querySelector('.modal');
     const section = document.querySelector('section');
