@@ -1,18 +1,28 @@
 const btnModal = document.querySelector('#btnModal');
 const btn = document.querySelector('#btnSubmit');
 const form = document.querySelector('#form');
+const section = document.querySelector('section');
+const overflow = document.querySelector('body');
+const firstSesion = sessionStorage.getItem('modal')
 
+if(!firstSesion){
 
-btnModal.addEventListener('click', () => {
-    const modal = document.querySelector('.modal');
-    const section = document.querySelector('section');
-    const overflow = document.querySelector('body')
-    modal.classList.add('modal--active');
+    sessionStorage.setItem('modal', true)
+
+    btnModal.addEventListener('click', () => {
+        const modal = document.querySelector('.modal');
+        modal.classList.add('modal--active');
+        overflow.classList.add('overflow')
+        setTimeout(()=>{
+            section.remove()
+        },1000)
+    });
+
+}else {
+    section.remove()
     overflow.classList.add('overflow')
-    setTimeout(()=>{
-        section.remove()
-    },1000)
-});
+}
+
 
 document.getElementById('form')
     .addEventListener('submit', function(event) {

@@ -16,7 +16,9 @@ header{
     color: $colorFontPrimary;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
     ul{
         display: inherit;
@@ -33,8 +35,7 @@ header{
             font-family: 'Basillion', sans-serif;
             color: $primary;
         }
-    }
-    
+    } 
 }
 main{
     .galery{
@@ -120,16 +121,13 @@ footer {
         display: inherit;
         flex-direction: row;
         gap: 50px;
+        margin-bottom: 30px;
         li a i {
             color: rgba($secondary, 0.7);
             &:hover{
                 color: $secondary; 
             }
         }
-    }
-    span {
-        text-align: center;
-        margin:10px 0 ;
     }
 }
 

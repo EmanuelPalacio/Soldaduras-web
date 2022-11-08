@@ -1,5 +1,9 @@
 @import url("https://fonts.cdnfonts.com/css/geomanist");
 @import url("https://fonts.cdnfonts.com/css/basillion");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -94,7 +98,9 @@ header {
   color: #333333;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 header ul {
   display: inherit;
@@ -192,16 +198,13 @@ footer ul {
   display: inherit;
   flex-direction: row;
   gap: 50px;
+  margin-bottom: 30px;
 }
 footer ul li a i {
   color: rgba(255, 255, 255, 0.7);
 }
 footer ul li a i:hover {
   color: #ffffff;
-}
-footer span {
-  text-align: center;
-  margin: 10px 0;
 }
 
 @media (max-width: 600px) {

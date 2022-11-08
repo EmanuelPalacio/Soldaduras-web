@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/c986322d71.js" crossorigin="anonymous"></script>
     <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        emailjs.init('uzlwoM5NBHpipXzJZ')
-    </script>
-    <script type="module" src="./JS/firebase.js" defer></script>
+    <script type="text/javascript"> emailjs.init('uzlwoM5NBHpipXzJZ')</script>
+    <script type="module" src="./JS/firebase.js"></script>
     <script src="./JS/index.js" defer></script>
     <script type="module" src="./JS/galery.js" defer></script>
     <title>Leandro Soldaduras</title>
@@ -28,16 +26,16 @@
     <header>
         <ul>
             <li><a href="#galery">GALERIA</a></li>
-            <li><a href="#">
+            <li><a href="#galery">
                 <img src="./img/logo/Leandro-soldaduras-Black.svg" alt="logo leandro soldaduras">
             </a></li>
-            <li><a href="#CONTACTAME">CONTACTO</a></li>
+            <li><a href="#contactame">CONTACTO</a></li>
         </ul>
     </header>
     <main>
-        <section class="galery">
+        <section id="galery" class="galery">
         </section>
-        <section id="CONTACTAME" class="contact">
+        <section id="contactame" class="contact">
             <h2>CONTACTAME!</h2>
             <video class="contact__video" autoplay loop muted>
                 <source src="./img/Welding - 75269.mp4" type="video/mp4">
@@ -57,7 +55,6 @@
             <li><a href="https://wa.me/542916454443?text=Hola," target="_blank"><i class="fa-brands fa-whatsapp fa-3x"></i></a></i></li>
         </ul>
         <span><i class="fa-solid fa-copyright"></i> Todos los derechos reservados Leandro Julian Dines</span>
-        <span><i class="fa-solid fa-copyright"></i> Imagenes de <a href="https://www.freepik.es/" target="_blank">www.freepik.es.</a></span>
     </footer>
 </body>
 </html>

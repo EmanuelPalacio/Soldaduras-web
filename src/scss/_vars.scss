@@ -12,6 +12,10 @@ $fontSizeTittle: 2rem;
 $fontSizeSubTittle: 1.5rem;
 $fontSizeText: 1rem;
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
