@@ -178,10 +178,12 @@ main .contact .contact__form .contact__input, main .contact .contact__form .cont
   font-size: 1.5rem;
   color: #ffffff;
 }
-main .contact .contact__form input[type=number]::-webkit-inner-spin-button,
-main .contact .contact__form input[type=number]::-webkit-outer-spin-button {
+main .contact .contact__form input[type=number] {
   appearance: none;
-  margin: 0;
+  -moz-appearance: textfield;
+}
+main .contact .contact__form input[type=number]::-webkit-inner-spin-button, main .contact .contact__form input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
 }
 main .contact .contact__form .contact__textarea {
   height: 200px;

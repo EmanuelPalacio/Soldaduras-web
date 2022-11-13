@@ -28,7 +28,7 @@ document.getElementById('form')
     .addEventListener('submit', function(event) {
     event.preventDefault();
 
-    btn.innerHTML = 'enviando...';
+    btn.innerHTML = 'Enviando...';
 
     const serviceID = 'default_service';
     const templateID = 'template_x4rif3f';
@@ -36,11 +36,11 @@ document.getElementById('form')
     emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
         btn.classList.toggle('btn--send')
-        btn.innerHTML = 'enviado';
+        btn.innerHTML = 'Enviado';
         setTimeout(() => {
             form.reset()
             btn.classList.toggle('btn--send')
-            btn.innerHTML = 'enviar'; 
+            btn.innerHTML = 'Enviar'; 
         }, 1500);
         
     }, (err) => {
